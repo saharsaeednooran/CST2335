@@ -3,4 +3,7 @@
     <string name="app_name">Lab1</string>
     <string name="hello_message">Hello world!</string>
     <string name="ButtonText">I\'m a Button</string>
+    <string name="login_message">login</string>
+    <string name="password_message">password</string>
+    <string name="switch_message">What does this do?</string>
 </resources>
