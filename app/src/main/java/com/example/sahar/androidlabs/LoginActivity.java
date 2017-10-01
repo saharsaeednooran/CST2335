@@ -15,7 +15,7 @@ public class LoginActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
     SharedPreferences sharedPref;
     Button submitButton;
-    EditText loginText,passwordText;
+    EditText loginText, passwordText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +23,13 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
-        submitButton= (Button) findViewById(R.id.loginButton);
-        loginText= (EditText) findViewById(R.id.loginText);
-        passwordText= (EditText) findViewById(R.id.passwordText);
+        submitButton = (Button) findViewById(R.id.loginButton);
+        loginText = (EditText) findViewById(R.id.loginText);
+        passwordText = (EditText) findViewById(R.id.passwordText);
 
         sharedPref = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
-        String email=sharedPref.getString("DefaultEmail", "email@domain.com");
+        String email = sharedPref.getString("DefaultEmail", "email@domain.com");
         loginText.setText(email);
-
 
 
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +39,7 @@ public class LoginActivity extends Activity {
                 editor.putString("DefaultEmail", loginText.getText().toString());
                 editor.commit();
 
-                Intent intent = new Intent(LoginActivity.this, StartActivity.class);
+                Intent intent = new Intent(getApplicationContext(), StartActivity.class);
                 startActivity(intent);
 
             }
@@ -48,27 +47,27 @@ public class LoginActivity extends Activity {
 
     }
 
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         Log.i(ACTIVITY_NAME, "In onResume()");
     }
 
-    protected void onStart(){
+    protected void onStart() {
         super.onStart();
         Log.i(ACTIVITY_NAME, "In onStart()");
     }
 
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         Log.i(ACTIVITY_NAME, "In onPause()");
     }
 
-    protected void onStop(){
+    protected void onStop() {
         super.onStop();
         Log.i(ACTIVITY_NAME, "In onStop()");
     }
 
-    protected void onDestroy(){
+    protected void onDestroy() {
         super.onDestroy();
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }

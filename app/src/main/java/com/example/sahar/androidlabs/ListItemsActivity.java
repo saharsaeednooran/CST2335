@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
@@ -31,7 +32,7 @@ public class ListItemsActivity extends Activity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(cameraIntent, 10);
             }
         });
@@ -68,7 +69,7 @@ public class ListItemsActivity extends Activity {
                         .setTitle(R.string.dialog_title)
                         .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                Intent resultIntent = new Intent(  );
+                                Intent resultIntent = new Intent();
                                 resultIntent.putExtra("Response", "Here is my response");
                                 setResult(Activity.RESULT_OK, resultIntent);
                                 finish();

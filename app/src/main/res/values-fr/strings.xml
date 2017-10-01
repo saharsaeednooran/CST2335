@@ -6,4 +6,9 @@
     <string name="login_message">login</string>
     <string name="password_message">mot de passe</string>
     <string name="switch_message">Qu\'est-ce que cela fait?</string>
+    <string name="loginButton">Login</string>
+    <string name="dialog_message">Voulez-vous terminer l\'activité?</string>
+    <string name="dialog_title">Terminer l\'activité</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Annuler</string>
 </resources>
