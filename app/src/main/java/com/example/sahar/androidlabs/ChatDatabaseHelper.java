@@ -15,7 +15,7 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "Messages.db" ;
     public static final String TABLE_NAME = "Messages_TABLE" ;
-    public static final int VERSION_NUM = 202;
+    public static final int VERSION_NUM = 203;
 
     //private final Context mCtx;
 
@@ -48,6 +48,10 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
 
+    }
+
+    public void deleteItem(String id) {
+        this.getWritableDatabase().execSQL("DELETE FROM " + TABLE_NAME + " WHERE " + COL_ID + " = " + id);
     }
 
 

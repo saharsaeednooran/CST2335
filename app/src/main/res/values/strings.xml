@@ -15,4 +15,9 @@
     <string name="incomingText">New Text</string>
     <string name="outgoingText">New Text</string>
     <string name="sendButton_message">Send</string>
+    <string name="weatherButton_message">WeatherForecast</string>
+    <string name="messageTextView_message">MessageHere</string>
+    <string name="idTextView_message">ID=</string>
+    <string name="deleteMsgButton_message">delete this message</string>
+
 </resources>
