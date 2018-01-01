@@ -14,7 +14,7 @@ import static java.security.AccessController.getContext;
 public class StartActivity extends Activity {
 
     protected static final String ACTIVITY_NAME = "StartActivity";
-    Button button,startChatButton,weatherButton;
+    Button button,startChatButton,weatherButton, testToolbarButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,16 @@ public class StartActivity extends Activity {
             public void onClick(View v) {
                 Log.i(ACTIVITY_NAME, "User clicked Weather Forecast");
                 Intent intent = new Intent(getApplicationContext(), WeatherForecast.class);
+                startActivity(intent);
+            }
+        });
+
+        testToolbarButton=(Button) findViewById(R.id.testToolbarButton);
+        testToolbarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(ACTIVITY_NAME, "User clicked Test Toolbar");
+                Intent intent = new Intent(getApplicationContext(), TestToolbar.class);
                 startActivity(intent);
             }
         });
